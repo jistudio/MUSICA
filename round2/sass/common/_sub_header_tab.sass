@@ -1,0 +1,97 @@
+
+/**
+ * --------------------------------
+ *  index header에서 바뀐 부분만 change
+ * --------------------------------
+ */
+
+.header-right
+  .nav_btn
+    background-position: -517px -38px
+  .search_btn
+    background-position: -368px -35px
+  .change_icon
+    background-position-x: -284px
+
+
+//////////////////////////////////
+
+.container_top
+  position: relative
+  background: #333
+  padding-bottom: getPercent(600, 1440)
+
+
+.tab_king
+  @include rwd-bg-image(1440, 600)
+  background-position: 0 0
+  position: absolute
+  z-index: 20
+  .overlay
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background: rgba(0,0,0,0.5)
+    display: none
+
+.media_btns
+  @include flex-container
+  position: absolute
+  z-index: 20
+  left: 6%
+  bottom: 24px
+  li
+    width: 50px
+    height: 50px
+    margin-right: 20px
+    &:nth-child(1) a
+      background-position: -22px -23px
+
+    &:nth-child(2) a
+      background-position: -92px -23px
+
+    &:nth-child(3) a
+      background-position: -162px -23px
+    a
+      @include svg-icon(100% ,100%)
+      &:hover,
+      &.change_icon
+        background-position-y: -348px
+
+
+.tab_contents
+  position: absolute
+  width: 100%
+  bottom: 0
+
+  .tab
+    position: relative
+    button
+      position: absolute 
+      top: 50%
+      transform: translateY(-50%)
+      @include svg-icon(12px, 21px)
+      &.prev
+        left: 3%
+        background-position: -93px -237px
+      &.next
+        right: 3%
+        background-position: -123px -237px
+
+#tab_content1
+  
+  ul
+    @include flex-container(no-wrap)
+    width: 88%
+    margin: 0 auto
+    li
+      flex: 1 1 25%
+      & a
+        display: block
+        @include rwd-bg-image(320, 320)   
+
+#tab_content2,
+#tab_content3
+  display: none

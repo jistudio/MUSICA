@@ -1,0 +1,49 @@
+// main
+main h2,
+.what_we_do h3,
+.headline h3
+	@extend %readable-hidden
+.what_we_do
+	margin-bottom: 100px
+.what_we_do ul
+	@include flex-container
+	li
+		flex-grow: 1
+		&:nth-child(1),
+		&:nth-child(3)
+			transform: translateY(50px)
+
+		&:nth-child(1) .overview_text
+			background: $cCoral
+		&:nth-child(2) .overview_text
+			background: $cOrange
+		&:nth-child(3) .overview_text
+			background: $cGrey
+		&:nth-child(4) .overview_text
+			background: $cGreen
+
+		a
+			display: block
+			width: 100%
+			height: 100%
+			position: relative
+			overflow: hidden
+
+			&:hover .overview_text,
+			&:focus .overview_text
+				top: 0
+			.overview
+				@include rwd-bg-image(320, 530)
+				
+			.overview_text
+				width: 100%
+				height: 0
+				padding: 10% 10% 155.5% 10%
+				position: absolute
+				top: 100%
+				left: 0
+				transition: all .5s ease
+				line-height: 30px
+				color: #fff
+				
+			

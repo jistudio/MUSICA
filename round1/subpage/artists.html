@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Intermusica | Artists</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intermusica is an award-winning international classical music agency inspiring artists to new creative heights.">
+    <meta name="keywords" content="Intermusica, music agency, inspiring artists, award-winning, artist management">
+    <link rel="stylesheet" href="../css/artist.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+
+<body data-ng-app="artApp">
+    <div class="container">
+        <div class="wrapper">
+            <div class="header">
+                <h1 class="brand_logo"><a href="">intermusica</a></h1>
+                <div class="header-right">
+                    <span class="page_indicator">Home</span>
+                    <button type="button" class="nav_btn">nav button</button>
+                    <nav>
+                        <h2>main navigation bar</h2>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Artists</a></li>
+                            <li><a href="">News</a></li>
+                            <li><a href="">International Tours</a></li>
+                            <li><a href="">Film &amp; Multimedia</a></li>
+                            <li><a href="">Dance</a></li>
+                            <li><a href="">What we do</a></li>
+                        </ul>
+                    </nav>
+                    <button type="button" class="search_btn">search button</button>
+                    <div class="search">
+                        <input type="search" name="search" placeholder="Search">
+                        <button type="button">send</button>
+                       
+                        
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- END header -->
+        </div>
+        <!-- END wrapper_header -->
+        <div class="wrapper">
+            <main data-ng-controller="artMemberListController as artCtrl">
+                <h2>main content</h2>
+                <div class="searchbox">
+                    <div class="byCategory">
+                        <div class="filter_collpase">
+                            <a href="">
+                                <h3>Find artist</h3>
+                                <h3>All categories</h3>
+                            </a>
+                        </div>
+                        <ul class="category_list">
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('')"><h3>All categories</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Composer')"><h3>Composer</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Piano')"><h3>Piano</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Organ')"><h3>Organ</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Violin')"><h3>Violin</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Viola')"><h3>Viola</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Cello')"><h3>Cello</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Percussion')"><h3>Percussion</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Ensemble')"><h3>Ensemble</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Chansonnier')"><h3>Chansonnier</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Conductor')"><h3>Conductor</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Special')"><h3>Special projects</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Soprano')"><h3>Soprano</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Mezzo')"><h3>Mezzo-soprano</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Counter')"><h3>Counter-tenor</h3></a></li>
+                            <li><a href="" data-ng-click="artCtrl.filterPosition('Tenor')"><h3>Tenor</h3></a></li>
+                        </ul>
+                    </div>
+                    <div class="byName">
+                        <input type="search" placeholder="Search by name" data-ng-model="artCtrl.search.name">
+                    </div>
+                </div>
+                <section class="gridview">
+                    <h3>Artist Lists</h3>
+                    <div class="view_option">
+                        <button>Image view</button>
+                        <button>List view</button>
+                    </div>
+                    <ul class="artist_grid">
+                        <li data-ng-repeat="(index, member) in artCtrl.members | filter:artCtrl.search.poisiton | filter:artCtrl.search.name">
+                            <a href="">
+                                <div class="aImage"> 
+                                    <img data-ng-src="{{ member.picture.src }}" alt="{{ member.name }}">
+                                </div>
+
+                                <div class="aCopy">
+                                    <span class="aName">{{member.name}}</span>
+                                    <span class="aPosition">{{member.position}}</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </section>
+            </main>
+            <!-- END main -->
+            <footer>
+                <ul>
+                    <li class="add">
+                        <span>© Intermusica 2015</span>
+                        <span><a href="https://goo.gl/maps/cFvNo" target="_blank">36 Graham Street<br>
+                    London N1 8GJ</a></span>
+                    </li>
+                    <li class="tel">
+                        <span>T +44 20 7608 9900</span>
+                        <span>F +44 20 7490 3263</span>
+                        <span><a href="mailto:mail@intermusica.co.uk">mail@intermusica.co.uk</a></span>
+                    </li>
+                    <li class="social">
+                        <span><a href="http://www.twitter.com/intermusicaltd" target="_blank">Twitter</a></span>
+                        <span><a href="http://www.instagram.com/Intermusicaltd" target="_blank">Instagram</a></span>
+                        <span><a href="https://www.youtube.com/user/IntermusicaArtists" target="_blank">YouTube</a></span>
+                    </li>
+                    <li class="terms">
+                        <span>Terms &amp; Privacy</span>
+                        <span><a href="http://sennep.com" target="_blank">Website by Sennep</a></span>
+                        <span>Newsletter sign-up</span>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+        <!-- END wrapper_rest-->
+    </div>
+    <script src="../js/offcanvas_menu.js"></script>
+    <script src="../js/search_bar.js" ></script>
+    <script src="../js/controller/findArtist.js"></script>
+</body>
+
+</html>

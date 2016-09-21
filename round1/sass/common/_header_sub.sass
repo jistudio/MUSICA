@@ -1,0 +1,170 @@
+.container
+	width: 100%
+	height: 100%
+
+.container_top
+	position: relative
+	background: #333
+
+.wrapper:first-child
+	@include rwd-bg-image(1440, 600)
+	background-position: center top
+	position: relative
+	z-index: 20
+
+.carousels
+	position: relative
+	// margin-top: -200px
+	background: gold
+	.carousel_pic
+		position: relative
+		
+		ul
+			@include flex-container(no-wrap)
+
+			li
+				flex: 1 1 25%
+				& a
+					display: block
+					@include rwd-bg-image(320, 320)
+
+		button
+			position: absolute
+			top: 50%
+			@include svg-icon(12px, 21px)
+			margin-top: -10px
+
+			&.prev
+				left: -30px
+				background-position: -93px -237px
+			&.next
+				right: -30px
+				background-position: -123px -237px
+		
+			
+
+	.carousel_video,
+	.carousel_audio
+		display: none
+
+
+.header,
+.carousels,
+main,
+footer,
+	width: 88%
+	max-width: 1280px
+	margin: 0 auto
+
+.header
+	@extend %clearfix
+	height: 150px
+	padding-top: 42px
+	h1
+		float: left
+		a
+			@extend %ir
+			width: 170px
+			height: 52.5px
+			background-image: url("../images/musica_logo.jpg")
+.header-right
+	float: right
+	@extend %clearfix
+	padding-top: 15px
+	color: #fff
+
+	.nav_btn,
+	.search_btn,
+	.page_indicator
+		float: left
+	.nav_btn,
+	.search_btn
+		@include svg-icon(23px)
+
+	.nav_btn
+		background-position: -517px -38px
+		margin: 0 20px
+	.search_btn
+		background-position: -368px -35px
+	.page_indicator
+		font-size: 16px
+		line-height: 20px
+	
+	nav,
+	.search
+    height: 100vh
+    position: fixed
+    top: 0
+    z-index: 10
+    padding: 40px 50px
+    background: $cGrey
+	
+	nav	
+		width: 400px
+		right: -400px
+		& a
+  	color: #fff
+  	line-height: 34px
+  	&:hover,
+  	&:focus
+  		color: $cCoral
+		h2
+	  	@extend %readable-hidden
+
+	.search
+		width: 400px
+		right: -400px
+		padding-top: 55px
+		color: #fff
+		input,
+		button
+			background-color: transparent
+			border: none
+			color: $cBeige
+			opacity: 0.5
+		input
+			width: calc(100% - 30px)
+			padding: 10px 0
+			border-bottom: 1px solid currentColor
+			
+		button
+			@include svg-icon(25px, 23px)
+			background-position: -479px -37px
+			vertical-align: middle
+
+
+.media_btns
+	@include flex-container
+	position: absolute
+	left: 6%
+	bottom: 24px
+	li
+		width: 50px
+		height: 50px
+		margin-right: 20px
+		& a
+			@include svg-icon(100% ,100%)
+		&:nth-child(1) a
+			background-position: -22px -23px
+		&:nth-child(1) a:hover
+			background-position: -22px -348px
+
+		&:nth-child(2) a
+			background-position: -92px -23px
+		&:nth-child(2) a:hover
+			background-position: -92px -348px
+
+		&:nth-child(3) a
+			background-position: -162px -23px
+		&:nth-child(3) a:hover
+			background-position: -162px -348px
+		
+
+
+
+
+	
+
+
+			
+

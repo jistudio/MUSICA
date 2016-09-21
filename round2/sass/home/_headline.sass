@@ -1,0 +1,45 @@
+.headline
+	margin-bottom: 50px
+	background: #fff
+	position: relative
+	.whole_circle
+		width: 508px 
+		height: 508px
+		margin: 0 auto 50px auto
+		@extend %clearfix
+		span
+			@include flex-container($justify-content: flex-start )
+			background: gold
+			width: 50%
+			height: 100% 
+			float: left
+			font-size: 45px
+			color: #fff
+			font-weight: $SansPro-normal
+			&:nth-of-type(1)
+				justify-content: flex-end
+				border-radius: 508px 0 0 508px
+			&:nth-of-type(2)
+		   	border-radius: 0 508px  508px 0 
+		   	transform: translateY(50px)
+    
+	.headline_text
+		@extend %clearfix
+		font-size: 24px
+		line-height: 30px
+		.circle_left,
+		.circle_right
+			width: 50%
+			float: left
+			p
+				margin-bottom: 20px
+		.circle_left
+			padding-right: 5%
+		.circle_right
+				padding-left: 5%
+				transform: translateY(50px)
+				a
+					border-bottom: 1px solid #999
+					&:hover,
+					&:focus
+						border-bottom-color: currentColor

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://api.jquery.com/filter/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>filter demo</title>
+  <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    float: left;
+    border: 2px white solid;
+  }
+  </style>
+  <script src="./jquery-1.10.2.js"></script>
+<style>html, body { border:0; margin:0; padding:0; }body { font-family: 'Helvetica', 'Arial',  'Verdana', 'sans-serif'; }</style></head>
+<body style="zoom: 1;">
+ 
+<div style="background: rgb(200, 235, 204);"></div>
+<div class="middle" style="border-color: red; background: rgb(200, 235, 204);"></div>
+<div class="middle" style="border-color: red; background: rgb(200, 235, 204);"></div>
+<div class="middle" style="border-color: red; background: rgb(200, 235, 204);"></div>
+<div class="middle" style="border-color: red; background: rgb(200, 235, 204);"></div>
+<div style="background: rgb(200, 235, 204);"></div>
+ 
+<script>window.onload = function() {
+$( "div" )
+  .css( "background", "#c8ebcc" )
+  .filter( ".middle" )
+    .css( "border-color", "red" );
+};</script>
+ 
+
+</body></html>

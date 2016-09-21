@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Artists - Choir of King's College, Cambridge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intermusica is an award-winning international classical music agency inspiring artists to new creative heights.">
+    <meta name="keywords" content="Intermusica, music agency, inspiring artists, award-winning, artist management">
+    <link rel="stylesheet" href="../../../css/kings.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="container_top">
+            <div class="tab_king aheader1">
+                <div class="header" data-ng-app="fdsApp">
+                    <h1 class="brand_logo"><a href="">intermusica</a></h1>
+                    <div class="header-right">
+                        <span class="page_indicator">Choir of King's College, Cambridge</span>
+                        <button type="button" class="nav_btn">nav button</button>
+                        <nav>
+                            <h2>main navigation bar</h2>
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Artists</a></li>
+                                <li><a href="">News</a></li>
+                                <li><a href="">International Tours</a></li>
+                                <li><a href="">Film &amp; Multimedia</a></li>
+                                <li><a href="">Dance</a></li>
+                                <li><a href="">What we do</a></li>
+                            </ul>
+                        </nav>
+                        <button type="button" class="search_btn">search button</button>
+                        <div class="search fds-members" data-ng-controller="fdsMemberListController as fdsCtrl">
+                            <input type="search" name="search" placeholder="Search" data-ng-model="search.name">
+                            <button type="button">send</button>
+                            <!--  <pre>{{search | json}}</pre> -->
+                            <ul class="member-list">
+                                <li data-ng-repeat="(index, member) in fdsCtrl.members | filter:search">
+                                    <div class="member-index">{{ index }}</div>
+                                    <div>
+                                        <ul>
+                                            <li>{{member.name}}</li>
+                                            <li>{{member.regiment}}</li>
+                                            <li>{{member.devil_fruit}}</li>
+                                            <li>{{member.position}}</li>
+                                            <li>{{member.wanted}}</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--  <pre>{{ fdsCtrl.members | json }}</pre> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- END header -->
+                <ul class="media_btns">
+                    <li><a href="#tab_content1">pictures</a></li>
+                    <li><a href="#tab_content2">videos</a></li>
+                    <li><a href="#tab_content3">audios</a></li>
+                </ul>
+                <div class="overlay"></div>
+            </div>
+            <!-- END tab_king -->
+            <div class="tab_contents">
+                <div id="tab_content1" class="tab">
+                    <ul>
+                        <li>
+                            <a href="" class="king1">pic1</a>
+                        </li>
+                        <li>
+                            <a href="" class="king2">pic2</a>
+                        </li>
+                        <li>
+                            <a href="" class="king3">pic3</a>
+                        </li>
+                        <li>
+                            <a href="" class="king4">pic4</a>
+                        </li>
+                       <!--  <li>
+                            <a href="" class="king5">pic5</a>
+                        </li>
+                        <li>
+                            <a href="" class="king6">pic6</a>
+                        </li> -->
+                    </ul>
+                    <button class="prev">prev</button>
+                    <button class="next">next</button>
+                </div>
+                <div id="tab_content2" class="tab">
+                    <ul>
+                        <li>
+                            <a href="">video1</a>
+                        </li>
+                        <li>
+                            <a href="">video2</a>
+                        </li>
+                    </ul>
+                    <button>prev</button>
+                    <button>next</button>
+                </div>
+                <div id="tab_content3" class="tab">
+                    <ul>
+                        <li>
+                            <a href="">audio</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END tab_contents -->
+        </div>
+        <!-- END container_top -->
+        <div class="wrapper">
+            <main>
+                <h2>main content</h2>
+                <nav class="subnav">
+                    <h3>subpage navigation</h3>
+                    <ul>
+                        <li><a href="">About</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Reviews</a></li>
+                        <li><a href="">Recordings</a></li>
+                    </ul>
+                </nav>
+                <section class="spa_content">
+                    <!-- ajax call -->
+                </section>
+            </main>
+            <!-- END main -->
+            <footer>
+                <ul>
+                    <li class="add">
+                        <span>© Intermusica 2015</span>
+                        <span><a href="https://goo.gl/maps/cFvNo" target="_blank">36 Graham Street<br>
+                    London N1 8GJ</a></span>
+                    </li>
+                    <li class="tel">
+                        <span>T +44 20 7608 9900</span>
+                        <span>F +44 20 7490 3263</span>
+                        <span><a href="mailto:mail@intermusica.co.uk">mail@intermusica.co.uk</a></span>
+                    </li>
+                    <li class="social">
+                        <span><a href="http://www.twitter.com/intermusicaltd" target="_blank">Twitter</a></span>
+                        <span><a href="http://www.instagram.com/Intermusicaltd" target="_blank">Instagram</a></span>
+                        <span><a href="https://www.youtube.com/user/IntermusicaArtists" target="_blank">YouTube</a></span>
+                    </li>
+                    <li class="terms">
+                        <span>Terms &amp; Privacy</span>
+                        <span><a href="http://sennep.com" target="_blank">Website by Sennep</a></span>
+                        <span>Newsletter sign-up</span>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+        <!-- END wrapper_rest-->
+    </div>
+    <!-- <script src="../../../js/offcanvas_menu.js"></script> -->
+   <!--  <script src="../../../js/king_spa.js"></script> -->
+    <script src="../../../js/tab_toggle_king.js"></script>
+    <script>
+    $(document).ready(function() {
+        // 5. 인스턴스 만들기
+        var tab1 = new TabMenu('.tab_king');
+        
+    });
+    </script>
+</body>
+
+</html>
