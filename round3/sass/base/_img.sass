@@ -1,0 +1,57 @@
+/**
+ * --------------------------------
+ * home.html
+ * --------------------------------
+ */
+// home/overview
+$overviews: ov1 ov2 ov3 ov4
+
+// @debug length($buttons)
+
+@each $overview in $overviews
+  .#{$overview}
+    background-image: url("../images/home/#{$overview}.jpg")
+
+
+// home/highlighs
+$highlights: hlight_img1 hlight_img2 hlight_img3 hlight_img4 hlight_img5 hlight_img6 hlight_img7 hlight_img8
+
+@each $highlight in $highlights
+  .#{$highlight}
+    background-image: url("../images/home/#{$highlight}.jpg")
+
+
+
+/**
+ * --------------------------------
+ * artist.html
+ * --------------------------------
+ */
+
+
+// $arts: artist1 artist2 artist3 artist4 artist5 artist6 artist7 artist8 artist9 artist10 artist11 artist12 artist13 artist14 artist15 artist16 artist17 artist18 artist19 artist20 artist21 artist22 artist23 artist24 artist25
+
+// @each $art in $arts
+//   .#{$art}
+//     background-image: url("../images/artist/#{$art}.jpg")
+
+
+/**
+ * --------------------------------
+ * artist - subpage - header
+ * --------------------------------
+ */
+
+$artheaders: aheader1 aheader2 aheader3 aheader4 aheader5
+
+@each $artheader in $artheaders
+  .#{$artheader}
+    background-image: url("../images/artist/#{$artheader}.jpg")
+
+// king thumnails
+$kings: king1 king2 king3 king4 king5 king6
+
+@each $king in $kings
+  .#{$king}
+    background-image: url("../images/artist/#{$king}.jpg")
+

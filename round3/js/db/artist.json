@@ -1,0 +1,180 @@
+[
+  {
+    "name": "Maxim Aksenov",
+    "position" : "Tenor",
+    "picture": {
+      "src": "../images/artist/artist1.jpg"
+
+    }
+  },
+  {
+    "name": "David Alden",
+    "position" : "Stage director",
+    "picture": {
+      "src": "../images/artist/artist2.jpg"
+
+    }
+  },
+  {
+    "name": "Marin Alsop",
+    "position" : "Conductor",
+    "picture": {
+      "src": "../images/artist/artist3.jpg"
+
+    }
+  },
+  {
+    "name": "Sergei",
+    "position" : "Babayan",
+    "picture": {
+      "src": "../images/artist/artist4.jpg"
+
+    }
+  },
+  {
+    "name": "Maxim Aksenov",
+    "position" : "Tenor",
+    "picture": {
+      "src": "../images/artist/artist5.jpg"
+
+    }
+  },
+  {
+    "name": "David Alden",
+    "position" : "Stage director",
+    "picture": {
+      "src": "../images/artist/artist6.jpg"
+
+    }
+  },
+  {
+    "name": "Marin Alsop",
+    "position" : "Conductor",
+    "picture": {
+      "src": "../images/artist/artist7.jpg"
+
+    }
+  },
+  {
+    "name": "Sergei",
+    "position" : "Babayan",
+    "picture": {
+      "src": "../images/artist/artist8.jpg"
+
+    }
+  },
+  {
+    "name": "Maxim Aksenov",
+    "position" : "Tenor",
+    "picture": {
+      "src": "../images/artist/artist1.jpg"
+
+    }
+  },
+  {
+    "name": "David Alden",
+    "position" : "Stage director",
+    "picture": {
+      "src": "../images/artist/artist2.jpg"
+
+    }
+  },
+  {
+    "name": "Marin Alsop",
+    "position" : "Conductor",
+    "picture": {
+      "src": "../images/artist/artist3.jpg"
+
+    }
+  },
+  {
+    "name": "Sergei",
+    "position" : "Babayan",
+    "picture": {
+      "src": "../images/artist/artist4.jpg"
+
+    }
+  },
+  {
+    "name": "Maxim Aksenov",
+    "position" : "Tenor",
+    "picture": {
+      "src": "../images/artist/artist5.jpg"
+
+    }
+  },
+  {
+    "name": "David Alden",
+    "position" : "Stage director",
+    "picture": {
+      "src": "../images/artist/artist6.jpg"
+
+    }
+  },
+  {
+    "name": "Marin Alsop",
+    "position" : "Conductor",
+    "picture": {
+      "src": "../images/artist/artist7.jpg"
+
+    }
+  },
+  {
+    "name": "Sergei",
+    "position" : "Babayan",
+    "picture": {
+      "src": "../images/artist/artist8.jpg"
+
+    }
+  },
+  {
+    "name": "Marin Alsop",
+    "position" : "Conductor",
+    "picture": {
+      "src": "../images/artist/artist3.jpg"
+
+    }
+  },
+  {
+    "name": "Sergei",
+    "position" : "Babayan",
+    "picture": {
+      "src": "../images/artist/artist4.jpg"
+
+    }
+  },
+  {
+    "name": "Maxim Aksenov",
+    "position" : "Tenor",
+    "picture": {
+      "src": "../images/artist/artist5.jpg"
+
+    }
+  },
+  {
+    "name": "David Alden",
+    "position" : "Stage director",
+    "picture": {
+      "src": "../images/artist/artist6.jpg"
+
+    }
+  },
+  {
+    "name": "Marin Alsop",
+    "position" : "Conductor",
+    "picture": {
+      "src": "../images/artist/artist7.jpg"
+
+    }
+  },
+  {
+    "name": "Sergei",
+    "position" : "Babayan",
+    "picture": {
+      "src": "../images/artist/artist8.jpg"
+
+    }
+  }
+
+ 
+]

@@ -1,0 +1,64 @@
+.highlights h3
+		font-size: 28px
+		margin-bottom: 20px
+.hightlight_top
+	margin-top: 50px
+
+.hightlight_top,
+.hightlight_bottom
+	display: flex
+	margin-bottom: 40%
+
+	.hlight
+		flex: 1 1 0
+		&.hl1,
+		&.hl3,
+		&.hl5,
+		&.hl7,
+			transform: translateY(50px)
+		a
+			display: block
+			width: 100%
+			height: 100%
+			position: relative	
+			color: #fff	
+			&:hover .hlight_text,
+			&:focus .hlight_text
+				top: 90%
+				padding-bottom: 100%
+
+			.hlight_img
+				@include rwd-bg-image(320, 320)
+
+			.hlight_text
+				display: flex
+				height: 0
+				position: absolute
+				top: 100% 
+				left: 0
+				padding: 10% 10% 90% 10%
+				transition: all .3s ease
+
+				&.hltxt1
+					background: $cCoral
+				&.hltxt2
+					background: $cYellow
+				&.hltxt3
+					background: $cBrown
+				&.hltxt4
+					background: $cBeige
+				&.hltxt5
+					background: $cBlue
+				&.hltxt6
+					background: $cGreen
+				&.hltxt7
+					background: $cGrey
+				&.hltxt8
+					background: $cOrange
+
+				
+		
+
+
+	
+ 	

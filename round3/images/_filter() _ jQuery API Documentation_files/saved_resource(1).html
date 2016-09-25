@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://api.jquery.com/filter/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>filter demo</title>
+  <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    float: left;
+    border: 3px white solid;
+  }
+  </style>
+  <script src="./jquery-1.10.2.js"></script>
+<style>html, body { border:0; margin:0; padding:0; }body { font-family: 'Helvetica', 'Arial',  'Verdana', 'sans-serif'; }</style></head>
+<body style="zoom: 1;">
+ 
+<div id="first" style="background: rgb(180, 176, 218);"></div>
+<div id="second" style="border: 3px double red; background: rgb(180, 176, 218);"></div>
+<div id="third" style="background: rgb(180, 176, 218);"></div>
+<div id="fourth" style="border: 3px double red; background: rgb(180, 176, 218);"></div>
+<div id="fifth" style="background: rgb(180, 176, 218);"></div>
+<div id="sixth" style="background: rgb(180, 176, 218);"></div>
+ 
+<script>window.onload = function() {
+$( "div" )
+  .css( "background", "#b4b0da" )
+  .filter(function( index ) {
+    return index === 1 || $( this ).attr( "id" ) === "fourth";
+  })
+    .css( "border", "3px double red" );
+};</script>
+ 
+
+</body></html>

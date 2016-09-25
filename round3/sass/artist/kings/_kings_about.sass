@@ -1,0 +1,269 @@
+  
+.about
+  @include flex-container($justify-content: flex-start,$align-items:flex-start)
+  &>div
+    flex: 1 1 1
+    article
+      margin-bottom: 50px
+  
+  .col1
+    width: 50%
+    p 
+      margin-bottom: 20px
+    @include mq(sm)
+      width: 100%
+    @include mq(xs)
+      width: 100%
+
+  .col2
+    width: 25%
+    border-top: 1px solid #f0f0f0
+    transform: translateY(-100px)
+    @include mq(sm)
+      width: 50%
+      transform: translateY(0px)
+    @include mq(xs)
+      width: 100%
+      transform: translateY(0px)
+  .col3
+    width: 25%
+    transform: translateY(-50px)
+    @include mq(sm)
+      width: 50%
+      transform: translateY(0px)
+    @include mq(xs)
+      width: 100%
+      transform: translateY(0px)
+
+  .bio_head,
+  .downloads
+    background: $cGreen
+    color: #fff
+    font-size: 18px
+    line-height: 24px
+  .bio_more,
+  .testimonials,
+  .links,
+  .profile_contact
+    background: #fff
+    padding: 35px
+
+  .bio_head,
+  .bio_more
+    padding: 35px
+
+  .bio_head
+    .read_more 
+      a
+        display: block
+        position: relative
+        height: 25px
+        overflow: hidden   
+        color: #fff
+        padding-left: 35px
+        &::before
+          @include psudo-svg($width: 13px , $height: 13px) 
+          background-image: url(../../../images/icon_plus.svg)
+          left: 0
+          transition: all .3s ease
+        &.on::before
+          transform: rotate(45deg) translate(-50%,-50%)
+
+
+
+        span
+          display: block
+          position: absolute
+          transition: all .3s ease
+          &:nth-child(1)
+            top: 0
+          &:nth-child(1).up
+            top: -25px
+          &:nth-child(2)
+            top: 25px
+          &:nth-child(2).down
+            top: 0
+           
+
+  .bio_more
+    display: none
+    span
+      display: block
+      color: #999
+      font-size: 13px
+      line-height: 18px
+
+
+  
+  .testimonials,
+  .links,
+  .profile_contact
+    border-left: 1px solid $cLgrey
+
+  .testimonials
+    h4
+      @extend %readable-hidden
+    blockquote
+      margin: 0 0 20px 0
+      strong 
+        display: block
+        color: #999
+        font-weight: $SansPro-light
+  .links,
+  .profile_contact,
+    h4
+      font-size: 18px
+      line-height: 24px
+      color: $cGreen
+      margin-bottom: 20px
+  .downloads 
+    h4
+      position: relative
+      font-weight: $SansPro-light
+      a
+        display: block
+        width: 100%
+        height: 100%
+        padding: 35px
+        color: #fff
+        &::after
+          @include psudo-svg($width: 20px, $height: 12px)
+          right: 37px 
+          background-position: -30px -312px
+          transition: all .3s ease 
+        &.on::after
+          transform: rotate(180deg) translateY(50%)
+    .downlaod_btns
+      padding: 0 37px 37px 37px
+      font-size: 15px
+      line-height: 20px
+      display: none
+      button
+        position: relative
+        text-align: left
+        border: none
+        color: #fff
+        padding-left: 37px
+        background-color: transparent
+        &:hover
+          opacity: 0.5
+        &:nth-child(2)
+          margin-top: 15px
+        &::before
+          @include psudo-svg($width: 20px, $height: 16px) 
+          left: 0
+          background-position: -150px -195px
+
+  .links
+    li
+      a
+        display: block
+        position: relative
+        padding: 10px 0  8px 34px 
+        opacity: 0.5
+        transition: all .3s ease 
+        &:hover
+          opacity: 1
+        &::before
+          @include psudo-svg($width: 29px, $height: 24px) 
+          left: 0    
+    
+    li:nth-child(1) a::before,
+    li:nth-child(2) a::before
+      background-position: -33px -145px
+    li:nth-child(3) a::before
+      background-position: -67px -98px
+    li:nth-child(4) a::before,
+    li:nth-child(5) a::before
+      background-position: -29px -98px
+    li:nth-child(6) a::before
+      background-position: -134px -98px
+    li:nth-child(7) a::before
+      background-position: -395px -100px
+     
+  .profile_contact
+    li
+      margin-bottom: 20px
+      em,
+      em a
+        display: block
+        color: #999
+        font-style: normal  
+      em a:hover
+        color: #000
+    p
+      margin-bottom: 20px
+    form
+      background: $cLgrey
+      input,
+      textarea,
+      button
+        width: 100%
+        padding: 20px
+        color: #666
+        background: transparent
+        border: none
+        border-bottom: 1px solid #fff
+      textarea
+        resize: none
+        height: 180px
+        border: none
+      button
+        color: #fff
+        background: $cGreen
+        text-align: left 
+        &:hover
+          background: #45a38d
+
+  .all_artists
+    h4 
+      background: #fff
+      a
+        position: relative
+        font-size: 18px
+        line-height: 24px
+        display: block
+        width: 100%
+        height: 100%
+        padding: 35px
+        color: $cGreen
+        &::after
+          @include psudo-svg($width: 20px, $height: 12px) 
+          background-position: -30px -277px
+          transition: all .3s ease 
+          right: 35px
+        &.on::after
+          transform: rotate(180deg) translateY(50%)
+    &>div
+      display: none
+      padding: 0 35px 
+      background: #fff
+      height: 350px
+      overflow: scroll
+      & a
+        color: #999
+        &:hover
+          color: #000
+      &>div 
+        margin-bottom: 20px
+      h5
+        padding: 0
+        color: #000
+
+  .social
+    ul 
+      @include flex-container
+      li 
+        flex: 1 1 0
+        margin-right: 5px
+        &:nth-child(1) a
+          background-position: -24px -464px
+        &:nth-child(2) a
+          background-position: -64px -464px
+        &:nth-child(3) a
+          background-position: -104px -464px
+        a 
+          @include svg-icon($width: 35px , $height: 35px)
+        &:hover
+          opacity: 0.5
+         

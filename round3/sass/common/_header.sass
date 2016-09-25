@@ -1,0 +1,109 @@
+.container
+	width: 100%
+	height: 100%
+	background: #fff
+
+.wrapper
+	background: #fff
+.header
+	width: 100%
+	padding: 0 6%
+main,
+footer
+	width: 88%
+	max-width: 1280px
+	margin: 0 auto
+
+.header
+	@extend %clearfix
+	position: relative
+	z-index: 30
+	height: 150px
+	padding-top: 42px
+	background: #fff
+
+	h1
+		float: left
+		a
+			@extend %ir
+			width: 170px
+			height: 52.5px
+			background-image: url("../images/musica_logo.jpg")
+.header-right
+	float: right
+	@extend %clearfix
+	padding-top: 15px
+	color: #fff
+
+	.nav_btn,
+	.search_btn,
+	.page_indicator
+		float: left
+	.nav_btn,
+	.search_btn
+		@include svg-icon(23px)
+
+	.nav_btn
+		background-position: -242px -35px
+		margin: 0 20px
+	.search_btn
+		background-position: -327px -35px
+	.change_icon
+		background-position-x: -284px
+	.page_indicator
+		font-size: 16px
+		line-height: 20px
+		color: #000
+	nav,
+	.search
+    height: 100vh
+    position: fixed
+    top: 0
+    z-index: 10
+    padding: 40px 50px
+    background: $cGrey
+	
+	nav	
+		width: 400px
+		right: -400px
+		& a
+  	color: #fff
+  	line-height: 34px
+  	&:hover,
+  	&:focus
+  		color: $cCoral
+		h2
+	  	@extend %readable-hidden
+
+	.search
+		width: 600px
+		right: -600px
+		padding-top: 55px
+		color: #fff
+		input,
+		button
+			background-color: transparent
+			border: none
+			color: $cBeige
+			opacity: 0.5
+		input
+			width: calc(100% - 30px)
+			padding: 10px 0
+			border-bottom: 1px solid currentColor
+			
+		button
+			@include svg-icon(25px, 23px)
+			background-position: -479px -37px
+			vertical-align: middle
+
+
+.page_overlay
+	width: 100vw
+	height: 100vh
+	background: rgba(0,0,0,0.5)
+	position: absolute
+	z-index: 20
+	top: 0
+	left: 0
+	display: none
+

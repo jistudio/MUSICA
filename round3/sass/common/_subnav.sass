@@ -1,0 +1,28 @@
+.subnav
+	h3
+		@extend %readable-hidden
+	ul
+		@include flex-container
+		li
+			flex: 1 1 0
+			border-right: 1px solid #fff
+			&:last-child
+				border-right: none
+			a
+				display: block
+				background: $cLgreen
+				padding-left: 28px
+				font-size: 18px
+				line-height: 50px
+				color: #fff
+				&:hover,
+				&:focus
+					background: #45a38d
+				&.on
+					background: #45a38d
+
+.subnav.fixed
+	position: fixed
+	width: 88%	
+	left: 6%		
+	top: 93px
